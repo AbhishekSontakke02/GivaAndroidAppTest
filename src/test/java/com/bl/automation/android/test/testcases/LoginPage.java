@@ -25,7 +25,7 @@ public class LoginPage extends TestBase {
     }
     @Test
     public void testLogin() throws Exception {
-        Thread.sleep(4000);
+        Thread.sleep(5000);
     }
 
 

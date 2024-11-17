@@ -19,22 +19,20 @@ public class TestBase {
 
             capabilities = new DesiredCapabilities();
             capabilities.setCapability("platformName","Android");
-            capabilities.setCapability("platformVersion","14");
+            capabilities.setCapability("platformVersion","9");
             capabilities.setCapability("deviceName", "emulator-5554");
             capabilities.setCapability("appPackage","co.giva.jewellery");
             capabilities.setCapability("appActivity","co.giva.jewellery.MainActivityDefault");
 
             driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"),capabilities);
-            Thread.sleep(4000);
-            WebElement phone_number=driver.findElement(By.id("com.google.android.gms:id/phone_number_list_item"));
-            phone_number.click();
+            Thread.sleep(10000);
             driver.navigate().back();
-            WebElement allowNotification = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[1]"));
-            allowNotification.click();
+//            WebElement allowNotification = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[1]"));
+//            allowNotification.click();
         }
 
     public static void closeDriver() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.quit();
         }
     }
